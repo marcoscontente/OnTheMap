@@ -7,27 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01F3F079399F662FC1486EAC /* Pods_OnTheMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDB1E8BA963CDFA1C83A5F4 /* Pods_OnTheMap.framework */; };
+		8D03A5D921EEC58300B13907 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03A5D821EEC58300B13907 /* SharedData.swift */; };
 		8D33CA1021ECDBED00FEAE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA0F21ECDBED00FEAE33 /* AppDelegate.swift */; };
-		8D33CA1221ECDBED00FEAE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA1121ECDBED00FEAE33 /* ViewController.swift */; };
 		8D33CA1521ECDBED00FEAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D33CA1321ECDBED00FEAE33 /* Main.storyboard */; };
 		8D33CA1721ECDBEF00FEAE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D33CA1621ECDBEF00FEAE33 /* Assets.xcassets */; };
 		8D33CA1A21ECDBEF00FEAE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D33CA1821ECDBEF00FEAE33 /* LaunchScreen.storyboard */; };
-		8D33CA2621ED642500FEAE33 /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2521ED642500FEAE33 /* StudentLocation.swift */; };
-		8D33CA2921ED653C00FEAE33 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2821ED653C00FEAE33 /* ApiConstants.swift */; };
-		8D33CA2B21ED654800FEAE33 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2A21ED654800FEAE33 /* ApiClient.swift */; };
+		8D33CA2621ED642500FEAE33 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2521ED642500FEAE33 /* StudentInformation.swift */; };
+		8D33CA2921ED653C00FEAE33 /* ParseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2821ED653C00FEAE33 /* ParseConstants.swift */; };
+		8D33CA2B21ED654800FEAE33 /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA2A21ED654800FEAE33 /* ParseClient.swift */; };
+		8D381B4521F6A4BC00479417 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D381B4221F6A4BB00479417 /* Roboto-Regular.ttf */; };
+		8D381B4621F6A4BC00479417 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D381B4321F6A4BC00479417 /* Roboto-Thin.ttf */; };
+		8D381B4721F6A4BC00479417 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D381B4421F6A4BC00479417 /* Roboto-Medium.ttf */; };
+		8D381B4A21F6A5FF00479417 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D381B4821F6A5FF00479417 /* LoginViewController.swift */; };
+		8D381B4B21F6A5FF00479417 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D381B4921F6A5FF00479417 /* MainTableViewController.swift */; };
+		8D381B4E21F6A6C800479417 /* OnTheMapTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D381B4D21F6A6C800479417 /* OnTheMapTextFieldDelegate.swift */; };
+		8D381B5021F6A75700479417 /* UpdateLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D381B4F21F6A75700479417 /* UpdateLocationViewController.swift */; };
+		8D381B5221F6A77300479417 /* UpdateURLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D381B5121F6A77300479417 /* UpdateURLViewController.swift */; };
+		8DF9971721F69A89008A9922 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9971621F69A89008A9922 /* UdacityConstants.swift */; };
+		8DF9971921F69A9F008A9922 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9971821F69A9F008A9922 /* UdacityClient.swift */; };
+		8DF9971B21F69F4D008A9922 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9971A21F69F4D008A9922 /* MapViewController.swift */; };
+		8DF9971D21F6A008008A9922 /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF9971C21F6A008008A9922 /* StudentTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		298D270D5EF3E59981320420 /* Pods-OnTheMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMap/Pods-OnTheMap.release.xcconfig"; sourceTree = "<group>"; };
+		8D03A5D821EEC58300B13907 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
 		8D33CA0C21ECDBED00FEAE33 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D33CA0F21ECDBED00FEAE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D33CA1121ECDBED00FEAE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D33CA1421ECDBED00FEAE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D33CA1621ECDBEF00FEAE33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D33CA1921ECDBEF00FEAE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D33CA1B21ECDBEF00FEAE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D33CA2521ED642500FEAE33 /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
-		8D33CA2821ED653C00FEAE33 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		8D33CA2A21ED654800FEAE33 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		8D33CA2521ED642500FEAE33 /* StudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		8D33CA2821ED653C00FEAE33 /* ParseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseConstants.swift; sourceTree = "<group>"; };
+		8D33CA2A21ED654800FEAE33 /* ParseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		8D381B4221F6A4BB00479417 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		8D381B4321F6A4BC00479417 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		8D381B4421F6A4BC00479417 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8D381B4821F6A5FF00479417 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8D381B4921F6A5FF00479417 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		8D381B4D21F6A6C800479417 /* OnTheMapTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTextFieldDelegate.swift; sourceTree = "<group>"; };
+		8D381B4F21F6A75700479417 /* UpdateLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateLocationViewController.swift; sourceTree = "<group>"; };
+		8D381B5121F6A77300479417 /* UpdateURLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateURLViewController.swift; sourceTree = "<group>"; };
+		8DF9971621F69A89008A9922 /* UdacityConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
+		8DF9971821F69A9F008A9922 /* UdacityClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
+		8DF9971A21F69F4D008A9922 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8DF9971C21F6A008008A9922 /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		D2A0FF593F7E5D41D11682E1 /* Pods-OnTheMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheMap/Pods-OnTheMap.debug.xcconfig"; sourceTree = "<group>"; };
+		DCDB1E8BA963CDFA1C83A5F4 /* Pods_OnTheMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnTheMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +63,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01F3F079399F662FC1486EAC /* Pods_OnTheMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32342ED0BD79C0E61A4B79ED /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2A0FF593F7E5D41D11682E1 /* Pods-OnTheMap.debug.xcconfig */,
+				298D270D5EF3E59981320420 /* Pods-OnTheMap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8D33CA0321ECDBED00FEAE33 = {
 			isa = PBXGroup;
 			children = (
 				8D33CA0E21ECDBED00FEAE33 /* OnTheMap */,
 				8D33CA0D21ECDBED00FEAE33 /* Products */,
+				32342ED0BD79C0E61A4B79ED /* Pods */,
+				954D90F9FEB12863B9A3D88A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,8 +102,7 @@
 			children = (
 				8D33CA2721ED652C00FEAE33 /* Network */,
 				8D33CA2421ECE29E00FEAE33 /* Supporting Files */,
-				8D33CA2321ECE29300FEAE33 /* View */,
-				8D33CA2221ECE28D00FEAE33 /* Controller */,
+				8D33CA2221ECE28D00FEAE33 /* ViewController */,
 				8D33CA2121ECE28700FEAE33 /* Model */,
 				8D33CA0F21ECDBED00FEAE33 /* AppDelegate.swift */,
 				8D33CA1321ECDBED00FEAE33 /* Main.storyboard */,
@@ -74,29 +113,29 @@
 		8D33CA2121ECE28700FEAE33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8D33CA2521ED642500FEAE33 /* StudentLocation.swift */,
+				8D33CA2521ED642500FEAE33 /* StudentInformation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8D33CA2221ECE28D00FEAE33 /* Controller */ = {
+		8D33CA2221ECE28D00FEAE33 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8D33CA1121ECDBED00FEAE33 /* ViewController.swift */,
+				8D381B4C21F6A6B400479417 /* Delegates */,
+				8D381B4821F6A5FF00479417 /* LoginViewController.swift */,
+				8D381B4921F6A5FF00479417 /* MainTableViewController.swift */,
+				8DF9971A21F69F4D008A9922 /* MapViewController.swift */,
+				8D381B5121F6A77300479417 /* UpdateURLViewController.swift */,
+				8DF9971C21F6A008008A9922 /* StudentTableViewController.swift */,
+				8D381B4F21F6A75700479417 /* UpdateLocationViewController.swift */,
 			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		8D33CA2321ECE29300FEAE33 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		8D33CA2421ECE29E00FEAE33 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8D381B4121F6A49900479417 /* Fonts */,
 				8D33CA1621ECDBEF00FEAE33 /* Assets.xcassets */,
 				8D33CA1821ECDBEF00FEAE33 /* LaunchScreen.storyboard */,
 				8D33CA1B21ECDBEF00FEAE33 /* Info.plist */,
@@ -107,10 +146,55 @@
 		8D33CA2721ED652C00FEAE33 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				8D33CA2821ED653C00FEAE33 /* ApiConstants.swift */,
-				8D33CA2A21ED654800FEAE33 /* ApiClient.swift */,
+				8D03A5D821EEC58300B13907 /* SharedData.swift */,
+				8DF9971521F69A52008A9922 /* UdacityApi */,
+				8DF9971421F699C6008A9922 /* ParseApi */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		8D381B4121F6A49900479417 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8D381B4421F6A4BC00479417 /* Roboto-Medium.ttf */,
+				8D381B4221F6A4BB00479417 /* Roboto-Regular.ttf */,
+				8D381B4321F6A4BC00479417 /* Roboto-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8D381B4C21F6A6B400479417 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				8D381B4D21F6A6C800479417 /* OnTheMapTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		8DF9971421F699C6008A9922 /* ParseApi */ = {
+			isa = PBXGroup;
+			children = (
+				8D33CA2821ED653C00FEAE33 /* ParseConstants.swift */,
+				8D33CA2A21ED654800FEAE33 /* ParseClient.swift */,
+			);
+			path = ParseApi;
+			sourceTree = "<group>";
+		};
+		8DF9971521F69A52008A9922 /* UdacityApi */ = {
+			isa = PBXGroup;
+			children = (
+				8DF9971621F69A89008A9922 /* UdacityConstants.swift */,
+				8DF9971821F69A9F008A9922 /* UdacityClient.swift */,
+			);
+			path = UdacityApi;
+			sourceTree = "<group>";
+		};
+		954D90F9FEB12863B9A3D88A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCDB1E8BA963CDFA1C83A5F4 /* Pods_OnTheMap.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D33CA1E21ECDBEF00FEAE33 /* Build configuration list for PBXNativeTarget "OnTheMap" */;
 			buildPhases = (
+				A6C7DB02A22FA5F91963F12C /* [CP] Check Pods Manifest.lock */,
 				8D33CA0821ECDBED00FEAE33 /* Sources */,
 				8D33CA0921ECDBED00FEAE33 /* Frameworks */,
 				8D33CA0A21ECDBED00FEAE33 /* Resources */,
+				F6DC636E767B9CF0644E4394 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,22 +259,87 @@
 			files = (
 				8D33CA1A21ECDBEF00FEAE33 /* LaunchScreen.storyboard in Resources */,
 				8D33CA1721ECDBEF00FEAE33 /* Assets.xcassets in Resources */,
+				8D381B4721F6A4BC00479417 /* Roboto-Medium.ttf in Resources */,
+				8D381B4521F6A4BC00479417 /* Roboto-Regular.ttf in Resources */,
+				8D381B4621F6A4BC00479417 /* Roboto-Thin.ttf in Resources */,
 				8D33CA1521ECDBED00FEAE33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A6C7DB02A22FA5F91963F12C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnTheMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6DC636E767B9CF0644E4394 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMap/Pods-OnTheMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OnTheMap/Pods-OnTheMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D33CA0821ECDBED00FEAE33 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D33CA2921ED653C00FEAE33 /* ApiConstants.swift in Sources */,
-				8D33CA2621ED642500FEAE33 /* StudentLocation.swift in Sources */,
-				8D33CA1221ECDBED00FEAE33 /* ViewController.swift in Sources */,
+				8D381B4B21F6A5FF00479417 /* MainTableViewController.swift in Sources */,
+				8D381B5021F6A75700479417 /* UpdateLocationViewController.swift in Sources */,
+				8DF9971921F69A9F008A9922 /* UdacityClient.swift in Sources */,
+				8D381B5221F6A77300479417 /* UpdateURLViewController.swift in Sources */,
+				8D381B4E21F6A6C800479417 /* OnTheMapTextFieldDelegate.swift in Sources */,
+				8D03A5D921EEC58300B13907 /* SharedData.swift in Sources */,
+				8DF9971721F69A89008A9922 /* UdacityConstants.swift in Sources */,
+				8D33CA2921ED653C00FEAE33 /* ParseConstants.swift in Sources */,
+				8D33CA2621ED642500FEAE33 /* StudentInformation.swift in Sources */,
 				8D33CA1021ECDBED00FEAE33 /* AppDelegate.swift in Sources */,
-				8D33CA2B21ED654800FEAE33 /* ApiClient.swift in Sources */,
+				8D33CA2B21ED654800FEAE33 /* ParseClient.swift in Sources */,
+				8DF9971B21F69F4D008A9922 /* MapViewController.swift in Sources */,
+				8D381B4A21F6A5FF00479417 /* LoginViewController.swift in Sources */,
+				8DF9971D21F6A008008A9922 /* StudentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,10 +483,11 @@
 		};
 		8D33CA1F21ECDBEF00FEAE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2A0FF593F7E5D41D11682E1 /* Pods-OnTheMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OnTheMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnTheMap/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -349,10 +501,11 @@
 		};
 		8D33CA2021ECDBEF00FEAE33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 298D270D5EF3E59981320420 /* Pods-OnTheMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = OnTheMap/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnTheMap/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
