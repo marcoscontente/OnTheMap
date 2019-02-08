@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,21 +14,24 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="LaunchImage" translatesAutoresizingMaskIntoConstraints="NO" id="7Rz-rk-8UH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UdacityLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Dlz-ns-zob">
+                                <rect key="frame" x="112.5" y="268.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="I2b-Xc-BQ1"/>
+                                    <constraint firstAttribute="width" constant="150" id="Uee-Ni-95P"/>
+                                </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0039215686269999999" green="0.70196078429999997" blue="0.89411764709999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="7Rz-rk-8UH" secondAttribute="bottom" id="1WK-NV-LsW"/>
-                            <constraint firstAttribute="trailing" secondItem="7Rz-rk-8UH" secondAttribute="trailing" id="4Ld-GJ-dnK"/>
-                            <constraint firstItem="7Rz-rk-8UH" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="IGr-Xl-HcB"/>
-                            <constraint firstItem="7Rz-rk-8UH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bQf-qD-IiW"/>
+                            <constraint firstItem="Dlz-ns-zob" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Edi-ov-gKI"/>
+                            <constraint firstItem="Dlz-ns-zob" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MT1-rt-9NC"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchImage" width="1536" height="2048"/>
+        <image name="UdacityLogo" width="80" height="80"/>
     </resources>
 </document>

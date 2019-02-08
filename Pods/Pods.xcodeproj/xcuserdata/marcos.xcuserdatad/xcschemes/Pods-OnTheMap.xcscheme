@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A6207E076805367C4CE5354995A4A159"
+               BlueprintIdentifier = "7153BE4A85E940319B4E8110BB66382E"
                BuildableName = "Pods_OnTheMap.framework"
                BlueprintName = "Pods-OnTheMap"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A6207E076805367C4CE5354995A4A159"
+            BlueprintIdentifier = "7153BE4A85E940319B4E8110BB66382E"
             BuildableName = "Pods_OnTheMap.framework"
             BlueprintName = "Pods-OnTheMap"
             ReferencedContainer = "container:Pods.xcodeproj">

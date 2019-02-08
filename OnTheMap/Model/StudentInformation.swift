@@ -7,98 +7,68 @@
 //
 
 import Foundation
+import MapKit
 
 struct StudentInformation {
     
-    // MARK: Properties
-    let CreatedAt: String
-    let FirstName: String
-    let LastName: String
-    var Latitude: Double
-    var Longitude: Double
-    var MapString: String
-    var MediaURL: String
-    let ObjectID: String
-    let UniqueKey: String
-    let UpdatedAt: String
-    
-    // MARK: Initializers
-    // construct a TMDBMovie from a dictionary
-    init?(dictionary: [String:AnyObject]) {
-        
-        if let createdAt = dictionary[ParseClient.GetStudentJSONResponseKeys.CreatedAt] as? String {
-            CreatedAt = createdAt
-        } else {
-            return nil
-        }
-        
-        if let firstName = dictionary[ParseClient.GetStudentJSONResponseKeys.FirstName] as? String {
-            FirstName = firstName
-        } else {
-            return nil
-        }
-        
-        if let lastName = dictionary[ParseClient.GetStudentJSONResponseKeys.LastName] as? String {
-            LastName = lastName
-        } else {
-            return nil
-        }
-        
-        if let latitude = dictionary[ParseClient.GetStudentJSONResponseKeys.Latitude] as? Double {
-            Latitude = latitude
-        } else {
-            return nil
-        }
-        
-        if let longitude = dictionary[ParseClient.GetStudentJSONResponseKeys.Longitude] as? Double {
-            Longitude = longitude
-        } else {
-            return nil
-        }
-        
-        if let mapString = dictionary[ParseClient.GetStudentJSONResponseKeys.MapString] as? String {
-            MapString = mapString
-        } else {
-            return nil
-        }
-        
-        if let mediaURL = dictionary[ParseClient.GetStudentJSONResponseKeys.MediaURL] as? String {
-            MediaURL = mediaURL
-        } else {
-            return nil
-        }
-        
-        if let objectID = dictionary[ParseClient.GetStudentJSONResponseKeys.ObjectID] as? String {
-            ObjectID = objectID
-        } else {
-            return nil
-        }
-        
-        if let uniqueKey = dictionary[ParseClient.GetStudentJSONResponseKeys.UniqueKey] as? String {
-            UniqueKey = uniqueKey
-        } else {
-            return nil
-        }
-        
-        if let updatedAt = dictionary[ParseClient.GetStudentJSONResponseKeys.UpdatedAt] as? String {
-            UpdatedAt = updatedAt
-        } else {
-            return nil
-        }
+    var createdAt: String?
+    var firstName: String?
+    var lastName: String?
+    var latitude: Double?
+    var longitude: Double?
+    var mapString: String?
+    var mediaURL: String?
+    var objectID: String?
+    var uniqueKey: String?
+    var updatedAt: String?
+    var fullName: String? {
+        return "\(firstName!) \(lastName!)"
     }
-    
-    // Convert from array of strings to StudentLoation object
-    static func StudentInformationsFromResults(_ results: [[String:AnyObject]]) -> [StudentInformation] {
-        
+
+    init?(_ parseResult: [String:AnyObject]) {
+        guard let CreatedAt = parseResult[Constants.createdAt] as? String else { return nil }
+        createdAt = CreatedAt
+        guard let ObjectID = parseResult[Constants.objectIDKey] as? String else { return nil }
+        objectID = ObjectID
+        guard let UniqueKey = parseResult[Constants.uniqueKeyKey] as? String else { return nil }
+        uniqueKey = UniqueKey
+        guard let FirstName = parseResult[Constants.firstNameKey] as? String else { return nil }
+        firstName = FirstName
+        guard let LastName = parseResult[Constants.lastNameKey] as? String else { return nil }
+        lastName = LastName
+        guard let MapString = parseResult[Constants.mapStringKey] as? String else { return nil }
+        mapString = MapString
+        guard let MediaURL = parseResult[Constants.mediaURLKey] as? String else { return nil }
+        mediaURL = MediaURL
+        guard let Longitude = parseResult[Constants.longitudeKey] as? Double else { return nil }
+        longitude = Longitude
+        guard let Latitude = parseResult[Constants.latitudeKey] as? Double else { return nil }
+        latitude = Latitude
+        guard let UpdatedAt = parseResult[Constants.updatedAtKey] as? String else { return nil }
+        updatedAt = UpdatedAt
+    }
+
+    static func getLocations(from results: [[String:AnyObject]]) -> [StudentInformation] {
         var studentInformations = [StudentInformation]()
-        
         // iterate through array of dictionaries, each Movie is a dictionary
         for result in results {
-            if let studentInformation = StudentInformation(dictionary: result) {
+            if let studentInformation = StudentInformation(result) {
                 studentInformations.append(studentInformation)
             }
         }
-        
         return studentInformations
     }
+}
+
+extension StudentInformation {
+    
+    var coordinate: CLLocationCoordinate2D? {
+        guard let latitude = latitude,
+            let longitude = longitude else {
+                return nil
+        }
+        return CLLocationCoordinate2D(latitude: CLLocationDegrees(latitude),
+                                      longitude: CLLocationDegrees(longitude))
+    }
+    
 }

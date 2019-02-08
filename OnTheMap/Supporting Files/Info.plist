@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Regular.ttf</string>
@@ -52,14 +57,14 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb365362206864879</string>
+				<string>fb2238999569699695</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>365362206864879</string>
+	<string>2238999569699695</string>
 	<key>FacebookDisplayName</key>
-	<string>OnTheMap</string>
+	<string>Marcos&apos;s first app</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
