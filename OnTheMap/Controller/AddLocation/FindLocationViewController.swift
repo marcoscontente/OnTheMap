@@ -58,6 +58,7 @@ class FindLocationViewController: UIViewController {
                         return
                 }
                 onSuccess(firstPlaceMark)
+                self.view.stopLoading()
             }
         }
     }

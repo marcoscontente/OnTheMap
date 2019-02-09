@@ -86,14 +86,15 @@ class LoginViewController: UIViewController {
         self.loginButton.startLoading(in: .component,
                                       blur: true,
                                       activityIndicatorViewStyle: .white)
-        
+
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             !email.isEmpty || !password.isEmpty else {
-            AlertHelper.showAlert(in: self,
-                                  withTitle: "Alert",
-                                  message: ErrorMessage.invalidEmailOrPassword.rawValue)
-            return
+                self.loginButton.stopLoading()
+                AlertHelper.showAlert(in: self,
+                                      withTitle: "Alert",
+                                      message: ErrorMessage.invalidEmailOrPassword.rawValue)
+                return
         }
         
         SessionService().performUdacityLogin(email, password: password) { (success, error) in
