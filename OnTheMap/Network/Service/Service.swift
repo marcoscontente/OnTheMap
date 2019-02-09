@@ -37,6 +37,7 @@ class Service {
         let task = session.dataTask(with: request) { data, response, error in
             guard (error == nil) else {
                 print("\(ErrorMessage.unknown.rawValue) \(error!)")
+                completion(nil, error)
                 return
             }
             
@@ -45,10 +46,10 @@ class Service {
                     let httpError = (response as? HTTPURLResponse)?.statusCode
                     let errorString = HTTPURLResponse.localizedString(forStatusCode: httpError!)
                     if httpError == 403 {
-                        completion(nil,error)
+                        completion(nil, error)
                         print("\(ErrorMessage.invalidEmailOrPassword.rawValue) - \(errorString)")
                     } else {
-                        completion(nil,error)
+                        completion(nil, error)
                         print("Your request returned a status code : \(httpError!) - \(errorString)")
                     }
                     return

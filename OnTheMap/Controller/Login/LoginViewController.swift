@@ -52,10 +52,12 @@ class LoginViewController: UIViewController {
                 return
             }
             guard (success == true) else {
-                AlertHelper.showAlert(in: self, withTitle: "Alert", message: ErrorMessage.couldNotLoadUserData.rawValue)
+                AlertHelper.showAlert(in: self, withTitle: "Alert", message: error)
                 return
             }
+            
             self.completeLogin()
+            
         }
     }
     
@@ -67,18 +69,24 @@ class LoginViewController: UIViewController {
     }
     
     func performFBLogin(_ fbToken: String) {
+        self.fbLoginButton.startLoading(in: .component, blur: true, activityIndicatorViewStyle: .white)
         SessionService().performFacebookLogin(fbToken) { (success, error) in
             if (success) {
                 print("**** login successful ****")
                 self.getStundentInformation()
+                self.fbLoginButton.stopLoading()
             } else {
+                self.fbLoginButton.stopLoading()
                 AlertHelper.showAlert(in: self, withTitle: "Alert", message: error)
             }
         }
     }
     
     @IBAction func performLogin(_ sender: Any) {
-
+        self.loginButton.startLoading(in: .component,
+                                      blur: true,
+                                      activityIndicatorViewStyle: .white)
+        
         guard let email = emailTextField.text,
             let password = passwordTextField.text,
             !email.isEmpty || !password.isEmpty else {
@@ -92,7 +100,9 @@ class LoginViewController: UIViewController {
             if (success) {
                 print("**** login successful ****")
                 self.getStundentInformation()
+                self.loginButton.stopLoading()
             } else {
+                self.loginButton.stopLoading()
                 AlertHelper.showAlert(in: self, withTitle: "Alert", message: error)
             }
         }

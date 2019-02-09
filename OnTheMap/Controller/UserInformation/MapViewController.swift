@@ -23,6 +23,7 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         students = SharedSession.shared.studentLocations
         
         loadStudentLocations()
@@ -44,6 +45,7 @@ class MapViewController: UIViewController {
     
     // MARK: - API Requests
     @objc func loadStudentLocations() {
+        view.startLoading()
         let parameters: [String:Any] = [Constants.parseParamsOrder: Constants.parseParamsDashUpdatedAt,
                                         Constants.parseParamsLimit: Constants.parseParamsLimitValue]
         
@@ -65,6 +67,7 @@ class MapViewController: UIViewController {
                 !students.isEmpty {
                 self.students = students
                 self.configureMapAndCreateMKPointAnnotations(from: self.students)
+                self.view.stopLoading()
             }
         })
     }
@@ -135,10 +138,17 @@ extension MapViewController: MKMapViewDelegate {
                                           message: ErrorMessage.couldNotOpenURL.rawValue)
                     return
             }
-            let url = URL(string: link)!
         
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            if link.validateUrl() {
+                let url = URL(string: link)!
+            
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    AlertHelper.showAlert(in: self,
+                                          withTitle: "Error",
+                                          message: "Sorry, we could'n open '\(link)', try again later.")
+                }
             } else {
                 AlertHelper.showAlert(in: self,
                                       withTitle: "Error",

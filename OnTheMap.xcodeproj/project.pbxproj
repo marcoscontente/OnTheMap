@@ -10,6 +10,7 @@
 		8D023DCF220BC62100C7EF82 /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D023DCE220BC62100C7EF82 /* StudentInformation.swift */; };
 		8D023DD2220DA68100C7EF82 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D023DD1220DA68100C7EF82 /* User.swift */; };
 		8D023DD4220DEF6500C7EF82 /* PostStudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D023DD3220DEF6500C7EF82 /* PostStudentInformation.swift */; };
+		8D023DD6220E225200C7EF82 /* Loading_OnTheMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D023DD5220E225200C7EF82 /* Loading_OnTheMap.swift */; };
 		8D03A5D921EEC58300B13907 /* SharedSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D03A5D821EEC58300B13907 /* SharedSession.swift */; };
 		8D33CA1021ECDBED00FEAE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D33CA0F21ECDBED00FEAE33 /* AppDelegate.swift */; };
 		8D33CA1521ECDBED00FEAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D33CA1321ECDBED00FEAE33 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		8D023DCE220BC62100C7EF82 /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
 		8D023DD1220DA68100C7EF82 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8D023DD3220DEF6500C7EF82 /* PostStudentInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostStudentInformation.swift; sourceTree = "<group>"; };
+		8D023DD5220E225200C7EF82 /* Loading_OnTheMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading_OnTheMap.swift; sourceTree = "<group>"; };
 		8D03A5D821EEC58300B13907 /* SharedSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedSession.swift; sourceTree = "<group>"; };
 		8D33CA0C21ECDBED00FEAE33 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D33CA0F21ECDBED00FEAE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				8D50364F220A6D6700E3ED14 /* String_OnTheMap.swift */,
+				8D023DD5220E225200C7EF82 /* Loading_OnTheMap.swift */,
 				8D503659220B1D3100E3ED14 /* UIColor_OnTheMap.swift */,
 				8D503653220A712500E3ED14 /* CLPlacemark_OnTheMap.swift */,
 			);
@@ -445,6 +448,7 @@
 				8D023DD2220DA68100C7EF82 /* User.swift in Sources */,
 				8D381B4A21F6A5FF00479417 /* LoginViewController.swift in Sources */,
 				8D76D8702202816A002A6205 /* EnvironmentError.swift in Sources */,
+				8D023DD6220E225200C7EF82 /* Loading_OnTheMap.swift in Sources */,
 				8DF9971D21F6A008008A9922 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

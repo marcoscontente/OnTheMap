@@ -20,37 +20,31 @@ class SessionService {
         
         Service().serviceRequest(request: request) { (result, error) in
             guard (error == nil) else {
-                print("There was an error with your request: \(error!)")
-                completion(false,ErrorMessage.couldNotLoadData.rawValue)
+                completion(false, error?.localizedDescription)
                 return
             }
             guard let account = result?.value(forKey: Constants.account) as? NSDictionary else {
-                print("Could not parse object for key: \(Constants.account)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.invalidEmailOrPassword.rawValue)
                 return
             }
             
             guard let registered = account.value(forKey: Constants.registered) as? Bool else {
-                print("Could not parse object for key: \(Constants.registered)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let accountKey = account.value(forKey: Constants.key) as? String else {
-                print("Could not parse object for key: \(Constants.key)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let session = result?.value(forKey: Constants.session) as? NSDictionary else {
-                print("Could not parse object for key: \(Constants.session)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let sessionID = session.value(forKey: Constants.id) as? String else {
-                print("Could not parse object for key: \(Constants.id)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
@@ -73,13 +67,12 @@ class SessionService {
         
         Service().serviceRequest(request: request) { (response, error) in
             guard (error == nil) else {
-                print("There was an error with your request: \(error!)")
                 completion(false, error?.localizedDescription)
                 return
             }
       
             guard let userResponse = response as? [String:AnyObject] else {
-                completion(false,error?.localizedDescription)
+                completion(false, error?.localizedDescription)
                 return
             }
             
@@ -98,37 +91,31 @@ class SessionService {
         
         Service().serviceRequest(request: request) { (result, error) in
             guard (error == nil) else {
-                print("There was an error with your request: \(error!)")
-                completion(false,ErrorMessage.couldNotLoadData.rawValue)
+                completion(false, error?.localizedDescription)
                 return
             }
             guard let account = result?.value(forKey: Constants.account) as? NSDictionary else {
-                print("Could not parse object for key: \(Constants.account)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.invalidEmailOrPassword.rawValue)
                 return
             }
             
             guard let registered = account.value(forKey: Constants.registered) as? Bool else {
-                print("Could not parse object for key: \(Constants.registered)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let accountKey = account.value(forKey: Constants.key) as? String else {
-                print("Could not parse object for key: \(Constants.key)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let session = result?.value(forKey: Constants.session) as? NSDictionary else {
-                print("Could not parse object for key: \(Constants.session)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             
             guard let sessionID = session.value(forKey: Constants.id) as? String else {
-                print("Could not parse object for key: \(Constants.id)")
-                completion(false,ErrorMessage.couldNotLoadUserData.rawValue)
+                completion(false, ErrorMessage.couldNotLoadUserData.rawValue)
                 return
             }
             

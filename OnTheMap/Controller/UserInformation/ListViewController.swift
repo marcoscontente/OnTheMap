@@ -28,6 +28,7 @@ class ListViewController: UIViewController {
     }
     
     func loadStudentLocations() {
+        view.startLoading()
         let parameters: [String:Any] = [Constants.parseParamsOrder: Constants.parseParamsUpdatedAt,
                                        Constants.parseParamsLimit: Constants.parseParamsLimitValue]
         
@@ -36,6 +37,7 @@ class ListViewController: UIViewController {
                 !studentsLocations.isEmpty {
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
+                        self.view.stopLoading()
                     }
             } else {
                 AlertHelper.showAlert(in: self,
@@ -47,6 +49,19 @@ class ListViewController: UIViewController {
                                       rightAction: UIAlertAction(title: "OK", style: .default, handler: nil))
             }
         })
+    }
+    
+    func completeURL(urlString: String?, _ isURL: ((URL) -> Void)) {
+        let url: URL!
+        guard let urlString = urlString else { return }
+        if urlString.hasPrefix("http://") ||
+            urlString.hasPrefix("https://"){
+            url = URL(string: urlString)
+            isURL(url)
+        } else {
+            url = URL(string: "http://" + urlString)
+            isURL(url)
+        }
     }
 }
 
@@ -61,21 +76,34 @@ extension ListViewController: UITableViewDelegate {
                                       message: ErrorMessage.invalidLink.rawValue)
                 return
         }
-        let url = URL(string: studentsMediaURL)!
-        if UIApplication.shared.canOpenURL(url) {
-            UIApplication.shared.open(url,
-                                      options: [:],
-                                      completionHandler: { (isSuccess) in
-                                        if !isSuccess {
-                                            AlertHelper.showAlert(in: self,
-                                                                  withTitle: "Error",
-                                                                  message: "Sorry, we could'n open '\(studentsMediaURL)'', try again later.")
-                                        }
-            })
+        
+        if studentsMediaURL.validateUrl() {
+            completeURL(urlString: studentsMediaURL) { (url) in
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url,
+                                              options: [:],
+                                              completionHandler: { (isSuccess) in
+                                                if !isSuccess {
+                                                    AlertHelper.showAlert(in: self,
+                                                                          withTitle: "Error",
+                                                                          message: "Sorry, we could'n open '\(studentsMediaURL)'', try again later.")
+                                                }
+                    })
+                } else {
+                    AlertHelper.showAlert(in: self,
+                                          withTitle: "Error",
+                                          message: "Sorry, we could'n open url, try again later.")
+                }
+            }
+        } else {
+            AlertHelper.showAlert(in: self,
+                                  withTitle: "Error",
+                                  message: "Sorry, we could'n open '\(studentsMediaURL)'', try again later.")
         }
         
     }
 }
+
 
 // MARK: - UITableViewDelegate
 extension ListViewController: UITableViewDataSource {
