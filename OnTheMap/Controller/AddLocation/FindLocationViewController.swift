@@ -40,11 +40,13 @@ class FindLocationViewController: UIViewController {
     // MARK: - API Calls
     private func performForwardGeocode(with addressString: String!,
                                        onSuccess: @escaping ((_ placemark: CLPlacemark) -> ())) {
+        self.view.startLoading()
         CLGeocoder().geocodeAddressString(addressString) { (placemarks, error) in
             if let _ = error {
                 AlertHelper.showAlert(in: self,
                                       withTitle: "Error",
                                       message: ErrorMessage.unableToFindLocationForAddress.rawValue)
+                self.view.stopLoading()
             } else {
                 guard let placemarks = placemarks,
                     let firstPlaceMark = placemarks.first,
@@ -52,6 +54,7 @@ class FindLocationViewController: UIViewController {
                         AlertHelper.showAlert(in: self,
                                               withTitle: "Error",
                                               message: ErrorMessage.noMatchingLocationFound.rawValue)
+                        self.view.stopLoading()
                         return
                 }
                 onSuccess(firstPlaceMark)

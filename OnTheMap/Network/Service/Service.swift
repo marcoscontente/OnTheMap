@@ -36,8 +36,8 @@ class Service {
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             guard (error == nil) else {
-                print("\(ErrorMessage.unknown.rawValue) \(error!)")
-                completion(nil, error)
+                let userInfo: [String : Any] = [NSLocalizedDescriptionKey: "No internet connection"]
+                completion(nil,NSError(domain: "Error", code: 500, userInfo: userInfo))
                 return
             }
             
@@ -46,11 +46,11 @@ class Service {
                     let httpError = (response as? HTTPURLResponse)?.statusCode
                     let errorString = HTTPURLResponse.localizedString(forStatusCode: httpError!)
                     if httpError == 403 {
-                        completion(nil, error)
-                        print("\(ErrorMessage.invalidEmailOrPassword.rawValue) - \(errorString)")
+                        let userInfo: [String : Any] = [NSLocalizedDescriptionKey: ErrorMessage.invalidEmailOrPassword.rawValue]
+                        completion(nil,NSError(domain: "Error", code: 403, userInfo: userInfo))
                     } else {
-                        completion(nil, error)
-                        print("Your request returned a status code : \(httpError!) - \(errorString)")
+                        let userInfo: [String : Any] = [NSLocalizedDescriptionKey: errorString]
+                        completion(nil,NSError(domain: "Error", code: httpError!, userInfo: userInfo))
                     }
                     return
             }
